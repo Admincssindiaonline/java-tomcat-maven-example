@@ -12,7 +12,7 @@ node{
          sh "${mvnHome}/bin/mvn' test; sleep 3"
       }  
       stage('Deploy') {     
-          sshagent(['8c1675a3-e2f2-4128-9b1e-deb0e4a4dd8c']) {
+          sshagent(['944ecf8e-f06f-4478-a8b1-24c483a187dd']) {
                sh 'scp -o StrictHostKeyChecking=no target/*.war root@3.106.56.70:/opt/apache-tomcat-8.5.45/webapps'
               
               }
